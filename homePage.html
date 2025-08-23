@@ -11,6 +11,15 @@
       rel="stylesheet"
     />
 
+    <!-- font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- daisy ui CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -23,11 +32,189 @@
 
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body
-    class="flex justify-center items-center h-[100vh] bg-[#F4F5F7] font-outfit flex-col"
-  >
-    <h1>Home Page</h1>
+  <body class="flex bg-[#F4F5F7] font-outfit flex-col max-w-[450px] mx-auto">
+    <!-- top section -->
+    <section class="bg-white p-6 rounded-b-3xl">
+      <nav class="py-3">
+        <ul class="flex justify-between items-center">
+          <li class="flex items-center">
+            <div>
+              <img src="assets/Group.png" alt="Group" />
+            </div>
+            <div>
+              <h1 class="font-extrabold text-[#080808] text-lg">
+                ৳<span id="available_balance">45000</span>
+              </h1>
+              <p class="text-[#0808087e] text-sm">Available Balance</p>
+            </div>
+          </li>
+          <li>
+            <button class="btn text-[#0808087e] font-light">
+              <i
+                class="fa-solid fa-arrow-right-from-bracket text-[#080808cf]"
+              ></i
+              >Log Out
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- welcome section -->
+      <section class="pt-6 pb-5">
+        <h1 class="font-extrabold text-[#080808] text-2xl">
+          🔥 Welcome to Payooo!
+        </h1>
+        <p class="text-[#0808087e] text-lg">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </section>
+
+      <!-- card section -->
+      <section>
+        <div class="grid grid-cols-3 gap-4">
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/wallet1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Add Money
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/send1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Cash Out
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/money1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Transfer Money
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/bonus1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Get Bonus
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/purse1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Pay Bill
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center border border-[#08080857] rounded-xl py-4 hover:shadow-md hover:scale-105 transition group hover:border-[#0874F2] hover:bg-[#0875f21d]"
+          >
+            <img src="assets/transaction1.png" alt="" />
+            <h4
+              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+            >
+              Transactions
+            </h4>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- bottom section -->
+    <section class="p-6">
+      <h1 class="font-semibold text-lg">Add Money</h1>
+      <div class="bg-white p-6 rounded-4xl my-4">
+        <div>
+          <fieldset class="fieldset">
+            <legend
+              class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
+            >
+              Select A Bank
+            </legend>
+            <select
+              id="addMoney_bank"
+              class="select rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
+            >
+              <option disabled selected>Select Bank</option>
+              <option>City Bank</option>
+              <option>Brac Bank</option>
+              <option>NRBC Bank</option>
+            </select>
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="fieldset">
+            <legend
+              class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
+            >
+              Bank Account Number
+            </legend>
+            <input
+              id="addMoney_account_no"
+              type="text"
+              class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
+              placeholder="Enter 11 digit account number"
+            />
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="fieldset">
+            <legend
+              class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
+            >
+              Amount to Add
+            </legend>
+            <input
+              id="addMoney_amount"
+              type="text"
+              class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
+              placeholder="Add Amount to withdraw"
+            />
+          </fieldset>
+        </div>
+        <div>
+          <fieldset class="fieldset">
+            <legend
+              class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
+            >
+              Pin Number
+            </legend>
+            <input
+              id="addMoney_pin"
+              type="text"
+              class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+          </fieldset>
+        </div>
+        <button
+          id="add_money_btn"
+          type="button"
+          class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
+        >
+          Add Money
+        </button>
+      </div>
+    </section>
+
     <!-- js file links link -->
-    <script src="js/index.js"></script>
+    <script src="js/homePage.js"></script>
   </body>
 </html>
