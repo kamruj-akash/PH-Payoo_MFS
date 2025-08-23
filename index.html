@@ -4,15 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PayOO MFS</title>
-    <!-- boxIcons CDN Link -->
+
+    <!-- boxIcons CDN -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- daisy ui CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- tailwind CND -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link rel="stylesheet" href="css/index.css" />
   </head>
-  <body>
-    
+  <body
+    class="flex justify-center items-center h-[100vh] bg-[#F4F5F7] font-outfit flex-col"
+  >
+    <div
+      class="bg-[url(./assets/bg.png)] bg-no-repeat bg-cover flex items-center justify-center w-[300px]"
+    >
+      <img src="assets/Group.png" alt="" class="my-6" />
+    </div>
+    <div class="p-5 bg-white drop-shadow-lg rounded-xl w-[340px]">
+      <div>
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend font-medium text-sm">
+            Enter Your Number
+          </legend>
+          <input
+            id="input_mobileNo"
+            type="number"
+            class="input w-full font-light text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            placeholder="Your 11 Digit Number"
+          />
+        </fieldset>
+      </div>
+      <div>
+        <fieldset class="fieldset">
+          <legend class="fieldset-legend font-medium text-sm">
+            Enter Your PIN
+          </legend>
+          <input
+            id="input_PinNo"
+            type="number"
+            class="input w-full font-light text-sm [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            placeholder="Your 4 Digit PIN"
+          />
+        </fieldset>
+      </div>
+      <button
+        id="login_btn"
+        type="button"
+        class="btn w-full mt-3 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
+      >
+        Login
+      </button>
+    </div>
+    <!-- js file links link -->
     <script src="js/index.js"></script>
   </body>
 </html>
