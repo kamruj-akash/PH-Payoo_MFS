@@ -7,7 +7,7 @@ login.addEventListener("click", function (e) {
   const inputMobile = document.getElementById("input_mobileNo").value;
   const inputPin = document.getElementById("input_PinNo").value;
   if (inputMobile === loginMobile && inputPin === accountPinNo) {
-    window.location.href = "../homePage.html";
+    window.location.href = "./homePage.html";
   } else {
     alert("Incorrect Mobile or Password");
   }
