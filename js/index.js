@@ -1,7 +1,7 @@
 const login = document.getElementById("login_btn");
 const loginMobile = "12345678910";
 const accountPinNo = "1234";
-export { accountPinNo };
+
 login.addEventListener("click", function (e) {
   e.preventDefault();
   const inputMobile = document.getElementById("input_mobileNo").value;

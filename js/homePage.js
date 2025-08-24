@@ -1,4 +1,73 @@
-// set value
+// toggle btn
+document.getElementById("addMoney_btn").addEventListener("click", function () {
+  document.getElementById("latestPayment_parent_div").style.display = "none";
+  document.getElementById("addmoney_parent_div").style.display = "block";
+  document.getElementById("cashout_parent_div").style.display = "none";
+  document.getElementById("transferMoney_parent_div").style.display = "none";
+  document.getElementById("getBonus_parent_div").style.display = "none";
+  document.getElementById("payBill_parent_div").style.display = "none";
+  document.getElementById("transactions_parent_div").style.display = "none";
+});
+
+document.getElementById("cashOut_btn").addEventListener("click", function () {
+  document.getElementById("latestPayment_parent_div").style.display = "none";
+  document.getElementById("addmoney_parent_div").style.display = "none";
+  document.getElementById("cashout_parent_div").style.display = "block";
+  document.getElementById("transferMoney_parent_div").style.display = "none";
+  document.getElementById("getBonus_parent_div").style.display = "none";
+  document.getElementById("payBill_parent_div").style.display = "none";
+  document.getElementById("transactions_parent_div").style.display = "none";
+});
+
+document
+  .getElementById("transferMoney_btn")
+  .addEventListener("click", function () {
+    document.getElementById("latestPayment_parent_div").style.display = "none";
+    document.getElementById("addmoney_parent_div").style.display = "none";
+    document.getElementById("cashout_parent_div").style.display = "none";
+    document.getElementById("transferMoney_parent_div").style.display = "block";
+    document.getElementById("getBonus_parent_div").style.display = "none";
+    document.getElementById("payBill_parent_div").style.display = "none";
+    document.getElementById("transactions_parent_div").style.display = "none";
+  });
+
+document.getElementById("getBonus_btn").addEventListener("click", function () {
+  document.getElementById("latestPayment_parent_div").style.display = "none";
+  document.getElementById("addmoney_parent_div").style.display = "none";
+  document.getElementById("cashout_parent_div").style.display = "none";
+  document.getElementById("transferMoney_parent_div").style.display = "none";
+  document.getElementById("getBonus_parent_div").style.display = "block";
+  document.getElementById("payBill_parent_div").style.display = "none";
+  document.getElementById("transactions_parent_div").style.display = "none";
+});
+
+document.getElementById("payBill_btn").addEventListener("click", function () {
+  document.getElementById("latestPayment_parent_div").style.display = "none";
+  document.getElementById("addmoney_parent_div").style.display = "none";
+  document.getElementById("cashout_parent_div").style.display = "none";
+  document.getElementById("transferMoney_parent_div").style.display = "none";
+  document.getElementById("getBonus_parent_div").style.display = "none";
+  document.getElementById("payBill_parent_div").style.display = "block";
+  document.getElementById("transactions_parent_div").style.display = "none";
+});
+
+document
+  .getElementById("transactions_btn")
+  .addEventListener("click", function () {
+    document.getElementById("latestPayment_parent_div").style.display = "none";
+    document.getElementById("addmoney_parent_div").style.display = "none";
+    document.getElementById("cashout_parent_div").style.display = "none";
+    document.getElementById("transferMoney_parent_div").style.display = "none";
+    document.getElementById("getBonus_parent_div").style.display = "none";
+    document.getElementById("payBill_parent_div").style.display = "none";
+    document.getElementById("transactions_parent_div").style.display = "block";
+  });
+
+// logOut_btn
+document.getElementById("logOut_btn").addEventListener("click", function () {
+  window.location.href = "../index.html";
+});
+
 // import { accountPinNo } from "./index";
 const couponCode = "GET500";
 
@@ -122,69 +191,4 @@ document
     if (accountPinNo === PayBillPin) {
       document.getElementById("available_balance").innerText = PayBillBalance;
     }
-  });
-
-// toggle btn
-document.getElementById("addMoney_btn").addEventListener("click", function () {
-  document.getElementById("latestPayment_parent_div").style.display = "none";
-  document.getElementById("addmoney_parent_div").style.display = "block";
-  document.getElementById("cashout_parent_div").style.display = "none";
-  document.getElementById("transferMoney_parent_div").style.display = "none";
-  document.getElementById("getBonus_parent_div").style.display = "none";
-  document.getElementById("payBill_parent_div").style.display = "none";
-  document.getElementById("transactions_parent_div").style.display = "none";
-});
-
-document.getElementById("cashOut_btn").addEventListener("click", function () {
-  document.getElementById("latestPayment_parent_div").style.display = "none";
-  document.getElementById("addmoney_parent_div").style.display = "none";
-  document.getElementById("cashout_parent_div").style.display = "block";
-  document.getElementById("transferMoney_parent_div").style.display = "none";
-  document.getElementById("getBonus_parent_div").style.display = "none";
-  document.getElementById("payBill_parent_div").style.display = "none";
-  document.getElementById("transactions_parent_div").style.display = "none";
-});
-
-document
-  .getElementById("transferMoney_btn")
-  .addEventListener("click", function () {
-    document.getElementById("latestPayment_parent_div").style.display = "none";
-    document.getElementById("addmoney_parent_div").style.display = "none";
-    document.getElementById("cashout_parent_div").style.display = "none";
-    document.getElementById("transferMoney_parent_div").style.display = "block";
-    document.getElementById("getBonus_parent_div").style.display = "none";
-    document.getElementById("payBill_parent_div").style.display = "none";
-    document.getElementById("transactions_parent_div").style.display = "none";
-  });
-
-document.getElementById("getBonus_btn").addEventListener("click", function () {
-  document.getElementById("latestPayment_parent_div").style.display = "none";
-  document.getElementById("addmoney_parent_div").style.display = "none";
-  document.getElementById("cashout_parent_div").style.display = "none";
-  document.getElementById("transferMoney_parent_div").style.display = "none";
-  document.getElementById("getBonus_parent_div").style.display = "block";
-  document.getElementById("payBill_parent_div").style.display = "none";
-  document.getElementById("transactions_parent_div").style.display = "none";
-});
-
-document.getElementById("payBill_btn").addEventListener("click", function () {
-  document.getElementById("latestPayment_parent_div").style.display = "none";
-  document.getElementById("addmoney_parent_div").style.display = "none";
-  document.getElementById("cashout_parent_div").style.display = "none";
-  document.getElementById("transferMoney_parent_div").style.display = "none";
-  document.getElementById("getBonus_parent_div").style.display = "none";
-  document.getElementById("payBill_parent_div").style.display = "block";
-  document.getElementById("transactions_parent_div").style.display = "none";
-});
-
-document
-  .getElementById("transactions_btn")
-  .addEventListener("click", function () {
-    document.getElementById("latestPayment_parent_div").style.display = "none";
-    document.getElementById("addmoney_parent_div").style.display = "none";
-    document.getElementById("cashout_parent_div").style.display = "none";
-    document.getElementById("transferMoney_parent_div").style.display = "none";
-    document.getElementById("getBonus_parent_div").style.display = "none";
-    document.getElementById("payBill_parent_div").style.display = "none";
-    document.getElementById("transactions_parent_div").style.display = "block";
   });
