@@ -35,7 +35,7 @@
   <body class="flex bg-[#F4F5F7] font-outfit flex-col max-w-[450px] mx-auto">
     <!-- top section -->
     <section class="bg-white p-6 rounded-b-3xl">
-      <nav class="py-3">
+      <nav class="py-3 border-b-2">
         <ul class="flex justify-between items-center">
           <li class="flex items-center">
             <div>
@@ -296,7 +296,7 @@
                 Pin Number
               </legend>
               <input
-                id="account_pin"
+                id="addMoney_pin"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
                 placeholder="Enter 4 digit pin number"
@@ -355,7 +355,7 @@
                 Pin Number
               </legend>
               <input
-                id="account_pin"
+                id="withdraw_pin"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
                 placeholder="Enter 4 digit pin number"
@@ -363,11 +363,11 @@
             </fieldset>
           </div>
           <button
-            id="add_money_btn"
+            id="withdraw_btn"
             type="button"
             class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
           >
-            Add Money
+            Cash Out
           </button>
         </div>
       </div>
@@ -414,7 +414,7 @@
                 Pin Number
               </legend>
               <input
-                id="account_pin"
+                id="transfer_pin"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
                 placeholder="Enter 4 digit pin number"
@@ -422,7 +422,7 @@
             </fieldset>
           </div>
           <button
-            id="add_money_btn"
+            id="transferAmount_btn"
             type="button"
             class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
           >
@@ -443,7 +443,7 @@
                 Enter Bonus Coupon
               </legend>
               <input
-                id="getBonus_cuppon"
+                id="getBonus_Coupon"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
                 placeholder="Enter Your Coupon Code"
@@ -452,7 +452,7 @@
           </div>
 
           <button
-            id="add_money_btn"
+            id="getBonus_amount_btn"
             type="button"
             class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
           >
@@ -462,102 +462,24 @@
       </div>
 
       <!-- Add Money form -->
-      <div id="addmoney_parent_div" class="hidden p-6">
-        <h1 class="font-semibold text-lg">Add Money</h1>
-        <div class="bg-white p-6 rounded-4xl my-4">
-          <div>
-            <fieldset class="fieldset">
-              <legend
-                class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
-              >
-                Select A Bank
-              </legend>
-              <select
-                id="addMoney_bank"
-                class="select rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-              >
-                <option disabled selected>Select Bank</option>
-                <option>City Bank</option>
-                <option>Brac Bank</option>
-                <option>NRBC Bank</option>
-              </select>
-            </fieldset>
-          </div>
-          <div>
-            <fieldset class="fieldset">
-              <legend
-                class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
-              >
-                Bank Account Number
-              </legend>
-              <input
-                id="addMoney_account_no"
-                type="text"
-                class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-                placeholder="Enter 11 digit account number"
-              />
-            </fieldset>
-          </div>
-          <div>
-            <fieldset class="fieldset">
-              <legend
-                class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
-              >
-                Amount to Add
-              </legend>
-              <input
-                id="addMoney_amount"
-                type="text"
-                class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-                placeholder="Add Amount to Add Money"
-              />
-            </fieldset>
-          </div>
-          <div>
-            <fieldset class="fieldset">
-              <legend
-                class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
-              >
-                Pin Number
-              </legend>
-              <input
-                id="account_pin"
-                type="text"
-                class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-                placeholder="Enter 4 digit pin number"
-              />
-            </fieldset>
-          </div>
-          <button
-            id="add_money_btn"
-            type="button"
-            class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
-          >
-            Add Money
-          </button>
-        </div>
-      </div>
-
-      <!-- Pay Bill form -->
       <div id="payBill_parent_div" class="hidden p-6">
-        <h1 class="font-semibold text-lg">Pay Now</h1>
+        <h1 class="font-semibold text-lg">Pay Bill</h1>
         <div class="bg-white p-6 rounded-4xl my-4">
           <div>
             <fieldset class="fieldset">
               <legend
                 class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
               >
-                Select To Pay
+                Select Biller
               </legend>
               <select
-                id="payBill_selection"
+                id="biller_name"
                 class="select rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
               >
-                <option disabled selected>Select To Pay</option>
-                <option>Education Fee</option>
+                <option disabled selected>Select Biller</option>
                 <option>Water Bill</option>
                 <option>Gas Bill</option>
-                <option>Electricity Bill</option>
+                <option>Road Tax Bill</option>
               </select>
             </fieldset>
           </div>
@@ -569,10 +491,10 @@
                 Biller Account Number
               </legend>
               <input
-                id="payBill_account_no"
+                id="biller_account_no"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-                placeholder="Enter account number"
+                placeholder="Enter Billing number"
               />
             </fieldset>
           </div>
@@ -581,13 +503,13 @@
               <legend
                 class="fieldset-legend text-[#080808bb] font-medium text-[16px]"
               >
-                Amount to Pay
+                Bill Amount
               </legend>
               <input
                 id="payBill_amount"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
-                placeholder="Amount to Pay"
+                placeholder="Bill Amount"
               />
             </fieldset>
           </div>
@@ -599,7 +521,7 @@
                 Pin Number
               </legend>
               <input
-                id="account_pin"
+                id="payBill_pin"
                 type="text"
                 class="input rounded-3xl bg-[#F4F5F7] border-0 text-[#0808087d] w-full"
                 placeholder="Enter 4 digit pin number"
@@ -607,7 +529,7 @@
             </fieldset>
           </div>
           <button
-            id="add_money_btn"
+            id="PayBilling_btn"
             type="button"
             class="rounded-3xl btn w-full mt-6 bg-[#0874F2] text-white font-semibold text-lg hover:bg-[#2f6aad]"
           >
@@ -616,7 +538,7 @@
         </div>
       </div>
 
-      <!-- Pay Bill form -->
+      <!-- transactions_parent form -->
       <div id="transactions_parent_div" class="hidden p-6">
         <h1 class="font-semibold text-lg">All Transactions</h1>
         <div class="">
