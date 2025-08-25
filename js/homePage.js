@@ -9,35 +9,50 @@ function toggleHandler(id) {
   document.getElementById(id).style.display = "block";
 }
 
+function activeHandler(activeClass) {
+  const sharedActive = document.getElementsByClassName("activeStyle");
+  for (const share of sharedActive) {
+    share.classList.remove("bg-[#0875f21d]", "border-[#0874F2]", "shadow-md");
+    share.classList.add("border-[#08080857]");
+  }
+  document.getElementById(activeClass).classList.remove("border-[#08080857]");
+  document
+    .getElementById(activeClass)
+    .classList.add("bg-[#0875f21d]", "border-[#0874F2]", "shadow-md");
+}
+
 document.getElementById("addMoney_btn").addEventListener("click", function () {
   toggleHandler("addmoney_parent_div");
-  // document
-  //   .getElementById("addMoney_btn")
-  //   .classList.add("bg-[#0875f21d]", "border-[#0874F2]", "shadow-md");
+  activeHandler("addMoney_btn");
 });
 
 document.getElementById("cashOut_btn").addEventListener("click", function () {
   toggleHandler("cashout_parent_div");
+  activeHandler("cashOut_btn");
 });
 
 document
   .getElementById("transferMoney_btn")
   .addEventListener("click", function () {
     toggleHandler("transferMoney_parent_div");
+    activeHandler("transferMoney_btn");
   });
 
 document.getElementById("getBonus_btn").addEventListener("click", function () {
   toggleHandler("getBonus_parent_div");
+  activeHandler("getBonus_btn");
 });
 
 document.getElementById("payBill_btn").addEventListener("click", function () {
   toggleHandler("payBill_parent_div");
+  activeHandler("payBill_btn");
 });
 
 document
   .getElementById("transactions_btn")
   .addEventListener("click", function () {
     toggleHandler("transactions_parent_div");
+    activeHandler("transactions_btn");
   });
 
 // logOut_btn
@@ -46,8 +61,8 @@ document.getElementById("logOut_btn").addEventListener("click", function () {
 });
 
 // import { accountPinNo } from "./index";
-const couponCode = "GET500";
-
+const couponCode = "GET50";
+const accountPinNo = 1;
 // get value as a number
 function getNumberValue(id) {
   return parseInt(document.getElementById(id).value);
@@ -149,10 +164,10 @@ document
     const availableBalance = getInnerValue("available_balance");
     const inputCouponCode = getDefaultValue("getBonus_Coupon");
     if (couponCode === inputCouponCode) {
-      const getBonusBalance = availableBalance - 500;
+      const getBonusBalance = availableBalance + 50;
       document.getElementById("available_balance").innerText = getBonusBalance;
     } else {
-      alert("Enter a Valid Coupon Code");
+      alert("Coupon Code is: GET50");
     }
   });
 
@@ -171,5 +186,7 @@ document
 
     if (accountPinNo === PayBillPin) {
       document.getElementById("available_balance").innerText = PayBillBalance;
+    } else {
+      alert("Please provide valid PIN No");
     }
   });
