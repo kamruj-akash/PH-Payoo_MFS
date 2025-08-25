@@ -80,7 +80,7 @@
           >
             <img src="assets/wallet1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Add Money
             </h4>
@@ -91,7 +91,7 @@
           >
             <img src="assets/send1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Cash Out
             </h4>
@@ -102,7 +102,7 @@
           >
             <img src="assets/money1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Transfer Money
             </h4>
@@ -113,7 +113,7 @@
           >
             <img src="assets/bonus1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Get Bonus
             </h4>
@@ -124,7 +124,7 @@
           >
             <img src="assets/purse1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Pay Bill
             </h4>
@@ -135,7 +135,7 @@
           >
             <img src="assets/transaction1.png" alt="" />
             <h4
-              class="text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
+              class="activeStyleH4 text-sm font-normal text-[#080808bd] group-hover:text-[#0874F2]"
             >
               Transactions
             </h4>
@@ -154,84 +154,20 @@
           <div
             class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
           >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
+            <div
+              class="w-12 h-12 bg-[#F4F5F7] rounded-full flex items-center justify-center"
+            >
+              <div class="">
+                <img src="assets/wallet1.png" alt="wallet" />
+              </div>
             </div>
-            <div class="w-10/12 ps-2">
+            <div class="w-8/12 ps-2">
               <h1>Electricity Bill</h1>
               <p>Today 01:44 AM</p>
             </div>
-            <div class="w-1/12">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-          </div>
-          <div
-            class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
-          >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
-            </div>
-            <div class="w-10/12 ps-2">
-              <h1>Electricity Bill</h1>
-              <p>Today 01:44 AM</p>
-            </div>
-            <div class="w-1/12">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-          </div>
-          <div
-            class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
-          >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
-            </div>
-            <div class="w-10/12 ps-2">
-              <h1>Electricity Bill</h1>
-              <p>Today 01:44 AM</p>
-            </div>
-            <div class="w-1/12">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-          </div>
-          <div
-            class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
-          >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
-            </div>
-            <div class="w-10/12 ps-2">
-              <h1>Electricity Bill</h1>
-              <p>Today 01:44 AM</p>
-            </div>
-            <div class="w-1/12">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-          </div>
-          <div
-            class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
-          >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
-            </div>
-            <div class="w-10/12 ps-2">
-              <h1>Electricity Bill</h1>
-              <p>Today 01:44 AM</p>
-            </div>
-            <div class="w-1/12">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </div>
-          </div>
-          <div
-            class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
-          >
-            <div class="w-1/11">
-              <img src="assets/wallet1.png" alt="wallet" />
-            </div>
-            <div class="w-10/12 ps-2">
-              <h1>Electricity Bill</h1>
-              <p>Today 01:44 AM</p>
-            </div>
-            <div class="w-1/12">
+            <div
+              class="w-12 h-12 bg-[#F4F5F7] rounded-full flex items-center justify-center"
+            >
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
@@ -543,8 +479,8 @@
       <!-- transactions_parent form -->
       <div id="transactions_parent_div" class="toggle_handler p-6 hidden">
         <h1 class="font-semibold text-lg">All Transactions</h1>
-        <div class="">
-          <div
+        <div id="transaction_div">
+          <!-- <div
             class="flex justify-between items-center bg-white py-3 px-4 rounded-xl my-4"
           >
             <div
@@ -563,7 +499,7 @@
             >
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
